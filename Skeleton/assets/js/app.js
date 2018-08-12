@@ -94,7 +94,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
       .style("font-family", "arial")
       .style("font-size", "16px")
       .html(function(d) {
-        return (`${d.state}<hr>${xlabel}${d[chosenXAxis]}<br>${ylabel}${d[chosenYAxis]}`);
+        return (`${d.state}<br><br>${xlabel}${d[chosenXAxis]}<br>${ylabel}${d[chosenYAxis]}`);
       });
   
     circlesGroup.call(toolTip);
@@ -113,7 +113,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
 
 
 // Retrieve data from the CSV file and execute everything below
-var file = "https://raw.githubusercontent.com/the-Coding-Boot-Camp-at-UT/UTAUS201804DATA2-Class-Repository-DATA/master/16-D3/HOMEWORK/Instructions/data/data.csv?token=AiazW5XxJBOqUbP4limeka2i01qZffGyks5bdz-zwA%3D%3D"
+var file = "https://raw.githubusercontent.com/the-Coding-Boot-Camp-at-UT/UTAUS201804DATA2-Class-Repository-DATA/master/16-D3/HOMEWORK/Instructions/data/data.csv?token=AiazW_tvL4OQXH4aQqMTQFuhCXl3zJZ1ks5bePdVwA%3D%3D"
 d3.csv(file).then(successHandle, errorHandle);
 
 function errorHandle(error){
